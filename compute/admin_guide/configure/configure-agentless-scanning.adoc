@@ -11,9 +11,10 @@ To configure agentless scanning you must ensure the following requirements are m
 
 ifdef::compute_edition[]
 
-* You can create service keys and security groups in your cloud account.
-* You can apply agentless permission templates to your cloud account.
-* You can connect to the Prisma Cloud Console over HTTPS from your cloud account. Unless you are using a proxy to connect to the Prisma Cloud Console, you must enable auto-assign public IPs on the subnet or security group you use to connect your cloud account to the Prisma Cloud Console.
+* Ensure you have permissions to create service keys and security groups in your cloud account.
+* Ensure you have permissions to apply agentless permission templates to your cloud account.
+* Ensure you can connect to the Prisma Cloud Console over HTTPS from your cloud account. If default security group is not available, create custom security group with custom VPC that allows connection for scanners from the account to Prisma Cloud Console.  
+* Unless you are using a proxy to connect to the Prisma Cloud Console, you must enable auto-assign public IPs on the subnet or security group you use to connect your cloud account to the Prisma Cloud Console.
 
 To understand what permissions will be needed for agentless scanning, refer to our https://cdn.twistlock.com/docs/downloads/Agentless_Permissions.pdf[full permission list doc.] 
 The downloaded templates from Console add conditions around these permissions to ensure least privileged roles in your accounts. 
